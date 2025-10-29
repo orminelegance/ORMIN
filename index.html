@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORMIN — Where Elegance Lives | Premium Fashion, Jewelry & Home Lifestyle</title>
+    <meta name="description" content="Discover ORMIN's curated collection of premium fashion, jewelry, home décor, bed sheets, handbags, and home gadgets. Where timeless design meets modern living.">
+    <meta name="keywords" content="ORMIN, luxury lifestyle, fashion, jewelry, home décor, bed sheets, handbags, home gadgets, elegance, premium brand">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="ORMIN — Where Elegance Lives">
+    <meta property="og:description" content="Discover ORMIN's curated collection of premium fashion, jewelry, home décor, bed sheets, handbags, and home gadgets. Where timeless design meets modern living.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:url" content="https://www.ormin.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://www.ormin.com">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* CSS Variables */
+        :root {
+            --primary-color: #0a0a0a;
+            --secondary-color: #f8f8f8;
+            --accent-color: #d4af37;
+            --neutral-color: #f3eee8;
+            --text-color: #333;
+            --light-text: #777;
+            --heading-font: 'Cormorant Garamond', serif;
+            --body-font: 'Poppins', sans-serif;
+            --container-width: 1300px;
+            --section-spacing: 120px;
+            --transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+        }
+        
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: var(--body-font);
+            font-weight: 300;
+            color: var(--text-color);
+            background-color: var(--secondary-color);
+            overflow-x: hidden;
+            line-height: 1.7;
+            letter-spacing: 0.3px;
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--heading-font);
+            font-weight: 600;
+            letter-spacing: 1px;
+            line-height: 1.3;
+            margin-bottom: 1.5rem;
+        }
+        
+        h1 {
+            font-size: 4.5rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+        
+        h2 {
+            font-size: 3.5rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+        }
+        
+        h3 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+        
+        /* Container */
+        .container {
+            width: 90%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: var(--transition);
+            background-color: rgba(10, 10, 10, 0);
+        }
+        
+        header.scrolled {
+            background-color: rgba(10, 10, 10, 0.95);
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 0;
+            transition: var(--transition);
+        }
+        
+        header.scrolled nav {
+            padding: 15px 0;
+        }
+        
+        .logo {
+            font-family: var(--heading-font);
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            letter-spacing: 3px;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-menu li {
+            margin-left: 30px;
+        }
+        
+        .nav-menu a {
+            color: var(--secondary-color);
+            font-weight: 400;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            position: relative;
+            padding-bottom: 5px;
+        }
+        
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--accent-color);
+            transition: var(--transition);
+        }
+        
+        .nav-menu a:hover::after,
+        .nav-menu a.active::after {
+            width: 100%;
+        }
+        
+        .nav-menu a.active {
+            color: var(--accent-color);
+        }
+        
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .hero-slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+        }
+        
+        .hero-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1.5s ease;
+        }
+        
+        .hero-slide.active {
+            opacity: 1;
+        }
+        
+        .hero-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.8));
+            z-index: -1;
+        }
+        
+        .hero-content {
+            text-align: center;
+            color: var(--secondary-color);
+            z-index: 1;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        .hero-title {
+            font-size: 5rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            letter-spacing: 4px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3rem;
+            font-weight: 300;
+            margin-bottom: 50px;
+            letter-spacing: 2px;
+            text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            padding: 18px 45px;
+            border: none;
+            border-radius: 0;
+            font-weight: 500;
+            font-family: var(--body-font);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+            cursor: pointer;
+            text-align: center;
+        }
+        
+        .btn:hover {
+            background-color: #c9a433;
+            color: var(--primary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+        }
+        
+        .btn::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.6s ease;
+        }
+        
+        .btn:hover::after {
+            left: 100%;
+        }
+        
+        /* Section Styles */
+        section {
+            padding: var(--section-spacing) 0;
+            position: relative;
+        }
+        
+        .section-title {
+            font-size: 3.5rem;
+            text-align: center;
+            margin-bottom: 80px;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 2px;
+            background-color: var(--accent-color);
+        }
+        
+        /* About Section */
+        .about {
+            background: linear-gradient(to bottom, var(--secondary-color), var(--neutral-color));
+        }
+        
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 1.9;
+        }
+        
+        /* Category Section */
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 40px;
+        }
+        
+        .category-card {
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .category-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .category-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 1s ease;
+        }
+        
+        .category-card:hover .category-img {
+            transform: scale(1.08);
+        }
+        
+        .category-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(10, 10, 10, 0.1), rgba(10, 10, 10, 0.7));
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 40px;
+            transition: var(--transition);
+        }
+        
+        .category-card:hover .category-overlay {
+            background: linear-gradient(to bottom, rgba(10, 10, 10, 0.2), rgba(10, 10, 10, 0.8));
+        }
+        
+        .category-title {
+            color: var(--secondary-color);
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            transform: translateY(30px);
+            opacity: 0;
+            transition: var(--transition);
+        }
+        
+        .category-card:hover .category-title {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        /* Featured Collection */
+        .featured {
+            background: linear-gradient(to bottom, var(--neutral-color), var(--secondary-color));
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 50px;
+        }
+        
+        .product-card {
+            background-color: var(--secondary-color);
+            overflow: hidden;
+            transition: var(--transition);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .product-img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+        
+        .product-card:hover .product-img {
+            transform: scale(1.05);
+        }
+        
+        .product-info {
+            padding: 30px;
+        }
+        
+        .product-name {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        
+        .product-desc {
+            font-size: 1rem;
+            color: var(--light-text);
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+        
+        /* Experience Section */
+        .experience {
+            background-image: url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+        }
+        
+        .experience-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(10, 10, 10, 0.75);
+        }
+        
+        .experience-content {
+            position: relative;
+            z-index: 1;
+            color: var(--secondary-color);
+            text-align: center;
+        }
+        
+        .experience-title {
+            font-size: 3.5rem;
+            margin-bottom: 50px;
+            color: var(--secondary-color);
+        }
+        
+        .values {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 80px;
+            margin-top: 70px;
+        }
+        
+        .value-item {
+            text-align: center;
+            max-width: 280px;
+        }
+        
+        .value-icon {
+            font-size: 3.5rem;
+            color: var(--accent-color);
+            margin-bottom: 25px;
+        }
+        
+        .value-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .value-desc {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background: linear-gradient(to bottom, var(--secondary-color), var(--neutral-color));
+        }
+        
+        .testimonial-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .testimonial-text {
+            font-size: 2.2rem;
+            font-style: italic;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            font-family: var(--heading-font);
+            color: var(--primary-color);
+        }
+        
+        .testimonial-author {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--text-color);
+        }
+        
+        /* Newsletter */
+        .newsletter {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #1a1a1a 100%);
+            color: var(--secondary-color);
+        }
+        
+        .newsletter-title {
+            font-size: 3.5rem;
+            margin-bottom: 25px;
+            color: var(--secondary-color);
+        }
+        
+        .newsletter-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 50px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .newsletter-form {
+            max-width: 550px;
+            margin: 0 auto;
+            display: flex;
+            gap: 20px;
+        }
+        
+        .newsletter-input {
+            flex: 1;
+            padding: 18px 25px;
+            border: none;
+            border-radius: 0;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+        
+        .newsletter-input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .newsletter-input:focus {
+            outline: none;
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            padding: 80px 0 40px;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+            padding-bottom: 50px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .footer-brand {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .footer-logo {
+            font-family: var(--heading-font);
+            font-size: 2.8rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            margin-bottom: 25px;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 40px;
+            flex: 1;
+            justify-content: center;
+            min-width: 250px;
+        }
+        
+        .footer-link {
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+            transition: color 0.4s ease;
+        }
+        
+        .footer-link:hover {
+            color: var(--accent-color);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .social-link {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--secondary-color);
+            font-size: 1.3rem;
+            transition: var(--transition);
+        }
+        
+        .social-link:hover {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            transform: translateY(-5px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 40px;
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.5);
+            z-index: 999;
+            transition: var(--transition);
+            animation: pulse 2s infinite;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 3.5rem;
+            }
+            
+            h2 {
+                font-size: 2.8rem;
+            }
+            
+            h3 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-title {
+                font-size: 4rem;
+            }
+            
+            .section-title {
+                font-size: 2.8rem;
+            }
+            
+            .category-grid {
+                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            }
+            
+            .values {
+                gap: 50px;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 40px;
+                text-align: center;
+            }
+            
+            .footer-links {
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3rem;
+            }
+            
+            h2 {
+                font-size: 2.5rem;
+            }
+            
+            h3 {
+                font-size: 2rem;
+            }
+            
+            section {
+                padding: 80px 0;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+            }
+            
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .testimonial-text {
+                font-size: 1.8rem;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                height: 100vh;
+                background-color: var(--primary-color);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transition: var(--transition);
+            }
+            
+            .nav-menu.active {
+                right: 0;
+            }
+            
+            .nav-menu li {
+                margin: 20px 0;
+            }
+            
+            .mobile-menu-toggle {
+                display: block;
+                z-index: 1001;
+            }
+            
+            .hero-title {
+                font-size: 3.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2.2rem;
+            }
+            
+            h3 {
+                font-size: 1.8rem;
+            }
+            
+            .hero-title {
+                font-size: 3rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            
+            .values {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .category-card {
+                height: 400px;
+            }
+            
+            .product-img {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <a href="#home" class="logo">ORMIN</a>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#categories" class="nav-link">Collections</a></li>
+                    <li><a href="#featured" class="nav-link">Featured</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-slider">
+            <div class="hero-slide active">
+                <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Luxury Fashion by ORMIN">
+            </div>
+            <div class="hero-slide">
+                <img src="https://images.unsplash.com/photo-1604476623033-6e11d157d193?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Elegant Jewelry by ORMIN">
+            </div>
+            <div class="hero-slide">
+                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Luxury Home Décor by ORMIN">
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">ORMIN</h1>
+                <p class="hero-subtitle">Where Elegance Lives</p>
+                <a href="#categories" class="btn">Discover the Collection</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">The ORMIN Story</h2>
+            <div class="about-content">
+                <p>At ORMIN, we believe that elegance is not merely an aesthetic—it's a philosophy that transforms everyday moments into extraordinary experiences. Our curated collection embodies the perfect harmony between timeless design and modern sophistication.</p>
+                <p>Each piece in our collection is meticulously selected and crafted to bring refinement and beauty to your life. From the delicate touch of our premium bed sheets to the radiant gleam of our handcrafted jewelry, ORMIN elevates the ordinary into the exceptional.</p>
+                <p>Welcome to a world where elegance is not just seen, but felt—in your wardrobe, your home, and your soul.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop by Category Section -->
+    <section id="categories" class="categories">
+        <div class="container">
+            <h2 class="section-title">Collections</h2>
+            <div class="category-grid">
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Elegant Fashion Collection by ORMIN" class="category-img">
+                    <div class="category-overlay">
+                        <h3 class="category-title">Fashion</h3>
+                        <a href="https://wa.me/1234567890?text=Hi%20ORMIN,%20I'd%20like%20to%20order%20from%20the%20Fashion%20collection." class="btn">Order on WhatsApp</a>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1596944924616-7b38e7cfac36?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Luxury Jewelry Collection by ORMIN" class="category-img">
+                    <div class="category-overlay">
+                        <h3 class="category-title">Jewelry</h3>
+                        <a href="https://wa.me/1234567890?text=Hi%20ORMIN,%20I'd%20like%20to%20order%20from%20the%20Jewelry%20collection." class="btn">Order on WhatsApp</a>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Elegant Home Décor Collection by ORMIN" class="category-img">
+                    <div class="category-overlay">
+                        <h3 class="category-title">Home Décor</h3>
+                        <a href="https://wa.me/1234567890?text=Hi%20ORMIN,%20I'd%20like%20to%20order%20from%20the%20Home%20Décor%20collection." class="btn">Order on WhatsApp</a>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Luxury Bed Sheets Collection by ORMIN" class="category-img">
+                    <div class="category-overlay">
+                        <h3 class="category-title">Bed Sheets</h3>
+                        <a href="https://wa.me/1234567890?text=Hi%20ORMIN,%20I'd%20like%20to%20order%20from%20the%20Bed%20Sheets%20collection." class="btn">Order on WhatsApp</a>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Luxury Handbags Collection by ORMIN" class="category-img">
+                    <div class="category-overlay">
+                        <h3 class="category-title">Handbags</h3>
+                        <a href="https://wa.me/1234567890?text=Hi%20ORMIN,%20I'd%20like%20to%20order%20from%20the%20Handbags%20collection." class="btn">Order on WhatsApp</a>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Elegant Home Gadgets Collection by ORMIN" class="category-img">
+                    <div class="category-overlay">
+                        <h3 class="category-title">Home Gadgets</h3>
+                        <a href="https://wa.me/1234567890?text=Hi%20ORMIN,%20I'd%20like%20to%20order%20from%20the%20Home%20Gadgets%20collection." class="btn">Order on WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Collection Section -->
+    <section id="featured" class="featured">
+        <div class="container">
+            <h2 class="section-title">Featured Collection</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Elegant Evening Dress by ORMIN" class="product-img">
+                    <div class="product-info">
+                        <h3 class="product-name">Silk Evening Dress</h3>
+                        <p class="product-desc">A masterpiece of craftsmanship that drapes the body in liquid silk, designed for moments that demand nothing less than extraordinary.</p>
+                        <a href="https://wa.me/1234567890?text=Hi%20ORMIN,%20I'd%20like%20to%20order%20the%20Silk%20Evening%20Dress." class="btn">Order on WhatsApp</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Gold Diamond Necklace by ORMIN" class="product-img">
+                    <div class="product-info">
+                        <h3 class="product-name">Gold Diamond Necklace</h3>
+                        <p class="product-desc">Exquisite 18k gold intertwined with ethically sourced diamonds, creating a constellation of light around the neck.</p>
+                        <a href="https://wa.me/1234567890?text=Hi%20ORMIN,%20I'd%20like%20to%20order%20the%20Gold%20Diamond%20Necklace." class="btn">Order on WhatsApp</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Marble Centerpiece by ORMIN" class="product-img">
+                    <div class="product-info">
+                        <h3 class="product-name">Marble Centerpiece</h3>
+                        <p class="product-desc">Hand-carved from a single block of Carrara marble, this centerpiece transforms any dining table into a gallery of refined taste.</p>
+                        <a href="https://wa.me/1234567890?text=Hi%20ORMIN,%20I'd%20like%20to%20order%20the%20Marble%20Centerpiece." class="btn">Order on WhatsApp</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Egyptian Cotton Bed Sheets by ORMIN" class="product-img">
+                    <div class="product-info">
+                        <h3 class="product-name">Egyptian Cotton Sheets</h3>
+                        <p class="product-desc">Woven from the finest Giza 45 cotton, these sheets offer a cloud-like embrace that transforms sleep into a luxurious ritual.</p>
+                        <a href="https://wa.me/1234567890?text=Hi%20ORMIN,%20I'd%20like%20to%20order%20the%20Egyptian%20Cotton%20Sheets." class="btn">Order on WhatsApp</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Leather Tote Bag by ORMIN" class="product-img">
+                    <div class="product-info">
+                        <h3 class="product-name">Leather Tote Bag</h3>
+                        <p class="product-desc">Crafted from full-grain Italian leather with meticulous attention to detail, this tote is both a statement of style and a testament to craftsmanship.</p>
+                        <a href="https://wa.me/1234567890?text=Hi%20ORMIN,%20I'd%20like%20to%20order%20the%20Leather%20Tote%20Bag." class="btn">Order on WhatsApp</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Smart Home Hub by ORMIN" class="product-img">
+                    <div class="product-info">
+                        <h3 class="product-name">Smart Home Hub</h3>
+                        <p class="product-desc">Minimalist design meets cutting-edge technology in this elegant control center that seamlessly integrates with your sophisticated lifestyle.</p>
+                        <a href="https://wa.me/1234567890?text=Hi%20ORMIN,%20I'd%20like%20to%20order%20the%20Smart%20Home%20Hub." class="btn">Order on WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The ORMIN Experience Section -->
+    <section id="experience" class="experience">
+        <div class="experience-overlay"></div>
+        <div class="container">
+            <div class="experience-content">
+                <h2 class="experience-title">The ORMIN Philosophy</h2>
+                <p class="lead">Our commitment to excellence is reflected in every aspect of our brand</p>
+                
+                <div class="values">
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <h3 class="value-title">Quality</h3>
+                        <p class="value-desc">We source only the most exceptional materials and collaborate with master artisans who share our unwavering commitment to perfection.</p>
+                    </div>
+                    
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-hammer"></i>
+                        </div>
+                        <h3 class="value-title">Craftsmanship</h3>
+                        <p class="value-desc">Every ORMIN piece is meticulously crafted with painstaking attention to detail, ensuring each creation is a work of art in its own right.</p>
+                    </div>
+                    
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-hourglass-half"></i>
+                        </div>
+                        <h3 class="value-title">Timeless Design</h3>
+                        <p class="value-desc">Our designs transcend fleeting trends, offering enduring elegance that remains relevant and cherished through generations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Voices of Elegance</h2>
+            <div class="testimonial-container">
+                <p class="testimonial-text">"Elegance is not luxury — it's how you live. ORMIN has transformed my home and wardrobe with pieces that speak to my soul and elevate my everyday existence."</p>
+                <p class="testimonial-author">— Alexandra Chen, Interior Designer</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section id="newsletter" class="newsletter">
+        <div class="container">
+            <h2 class="newsletter-title">Join the ORMIN Circle</h2>
+            <p class="newsletter-subtitle">Be the first to discover new collections and exclusive offerings</p>
+            <form class="newsletter-form" id="newsletter-form">
+                <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
+                <button type="submit" class="btn">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">ORMIN</div>
+                    <p>Where Elegance Lives</p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/ormin" class="social-link" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/1234567890" class="social-link" target="_blank" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://maps.google.com/?q=ORMIN+Store" class="social-link" target="_blank" aria-label="Google Business">
+                            <i class="fab fa-google"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#about" class="footer-link">Our Story</a>
+                    <a href="#categories" class="footer-link">Collections</a>
+                    <a href="#featured" class="footer-link">Featured</a>
+                    <a href="https://wa.me/1234567890" class="footer-link">Contact</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 ORMIN. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/1234567890?text=Hi%20ORMIN,%20I'd%20like%20to%20inquire%20about%20your%20collections." class="whatsapp-float" target="_blank" aria-label="Contact on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- JSON-LD Schema for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "ORMIN",
+        "description": "Where Elegance Lives - A premium lifestyle brand offering fashion, jewelry, home décor, bed sheets, handbags, and home gadgets.",
+        "url": "https://www.ormin.com",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.ormin.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Brand",
+        "name": "ORMIN",
+        "description": "Where Elegance Lives - A premium lifestyle brand offering fashion, jewelry, home décor, bed sheets, handbags, and home gadgets.",
+        "url": "https://www.ormin.com",
+        "logo": "https://www.ormin.com/logo.png",
+        "sameAs": [
+            "https://instagram.com/ormin",
+            "https://wa.me/1234567890"
+        ]
+    }
+    </script>
+
+    <!-- Custom JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        
+        mobileMenuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenuToggle.innerHTML = navMenu.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                mobileMenuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Active Navigation Link
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (scrollY >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        
+        // Header Scroll Effect
+        const header = document.getElementById('header');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Hero Slider
+        const slides = document.querySelectorAll('.hero-slide');
+        let currentSlide = 0;
+        
+        function nextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+        
+        // Change slide every 5 seconds
+        setInterval(nextSlide, 5000);
+        
+        // Parallax Effect for Hero Section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroSlides = document.querySelectorAll('.hero-slide img');
+            
+            heroSlides.forEach(slide => {
+                slide.style.transform = `translateY(${scrolled * 0.5}px)`;
+            });
+        });
+        
+        // Newsletter Form Submission
+        const newsletterForm = document.getElementById('newsletter-form');
+        
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('.newsletter-input').value;
+            
+            // Create success message
+            const successMsg = document.createElement('div');
+            successMsg.className = 'alert alert-success mt-3';
+            successMsg.textContent = `Thank you for subscribing with ${email}! You'll receive our latest updates and exclusive offerings soon.`;
+            successMsg.style.color = 'white';
+            successMsg.style.padding = '10px';
+            successMsg.style.marginTop = '20px';
+            successMsg.style.textAlign = 'center';
+            successMsg.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+            successMsg.style.borderRadius = '4px';
+            
+            // Clear form and show success message
+            this.reset();
+            this.appendChild(successMsg);
+            
+            // Remove success message after 5 seconds
+            setTimeout(() => {
+                successMsg.remove();
+            }, 5000);
+        });
+        
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Intersection Observer for Fade-in Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all sections for animation
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
